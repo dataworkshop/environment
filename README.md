@@ -21,9 +21,9 @@ docker run -dt -p 8888-8889:8888-8889 -v //c/Users/windows_folder/:/opt/notebook
 
 ## Accessing jupyter servers
 
-Servers are available in your browser under <localhost>:8888 (Notebook) and <localhost>:8889 (Lab).
+Servers are available in your browser under localhost:8888 (Notebook) and localhost:8889 (Lab).
 
-Depending on docker app you're using, <localhost>:8888 is <docker-machine ip>:8888 (when usin Docker Toolbox), or localhost:8888 (when using Docker for Windows).  
+Depending on docker app you're using, localhost:8888 is docker-machine ip:8888 (when usin Docker Toolbox), or localhost:8888 (when using Docker for Windows).  
 
 ## Running container without jupyter server
 
