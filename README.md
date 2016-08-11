@@ -8,7 +8,7 @@ Environment for Data Workshop
 
 ## Build command (in Dockerfile directory):
 ```
-docker build -t enviornment:v0.1 .
+docker build -t dataworkshop:v0.1 .
 ```
 
 ## Basic Use
@@ -16,7 +16,7 @@ docker build -t enviornment:v0.1 .
 The following command starts a container with the Jupyter Notebook server listening for HTTP connections on port 8888 and Jupyter Lab server listening on port 8889. Windows volume is mounted to /opt/notebooks directory:
 
 ```
-docker run -dt -p 8888-8889:8888-8889 -v //c/Users/windows_folder/:/opt/notebooks --name jupyter enviornment:v0.1
+docker run -dt -p 8888-8889:8888-8889 -v //c/Users/windows_folder/:/opt/notebooks --name jupyter dataworkshop:v0.1
 ```
 
 ## Accessing jupyter servers
