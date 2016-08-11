@@ -12,7 +12,7 @@ RUN pip install seaborn && \
     pip install git+https://github.com/hyperopt/hyperopt.git && \
     pip install ml_metrics && \
 
-    ## build xgboost from git
+    ## build xgboost from git.
     apt-get --assume-yes install build-essential && \
     cd /usr/local/src && \
     git clone --recursive https://github.com/dmlc/xgboost.git && cd xgboost && ./build.sh && cd python-package && python setup.py install
