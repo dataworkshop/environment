@@ -5,27 +5,18 @@
 Basic environment for [Data Workshop](http://dataworkshop.com)
 
 ## Why?
-Minimum effort & maximum impact:
+Minimum effort & maximum impact :squirrel:
 * [Jupyter Notebook](http://jupyter.org/) and [Jupyter Lab](https://github.com/jupyter/jupyterlab)
 * Anaconda with Python 2.7.x
 * Additional packages [seaborn](https://stanford.edu/~mwaskom/software/seaborn/), [ggplot](http://ggplot.yhathq.com/), [hyperopt](https://github.com/hyperopt/hyperopt), [ml_metrics](https://github.com/benhamner/Metrics/tree/master/Python/ml_metrics), [xgboost](https://github.com/dmlc/xgboost)
 
 ## Prerequisites
-[Docker](https://docs.docker.com/engine/installation/)
+Only [Docker](https://docs.docker.com/engine/installation/) :bowtie:
 
 ## Build (build only first)
 ```
 docker run -dit -p 8888-8889:8888-8889 --name dataworkshop-environment dataworkshop/environment
 ```
-
-## Re-use (already built container)
-```
-docker start dataworkshop-environment
-```
-
-*Note: that in docker terminology*
-* `run`  means build (a new container)
-* `start` means start (already exists) container
 
 ## Use
 * Notebook - [localhost:8888](http://localhost:8888)
@@ -36,6 +27,14 @@ docker start dataworkshop-environment
 #### Example
 The URL column (`docker-machine ls`) contain  `tcp://192.168.99.100:2376`, so you should copy `192.168.99.100` and add notebook port `192.168.99.100:8888` or lab port `192.168.99.100:8889`. 
 
+## Re-use (already built container)
+```
+docker start dataworkshop-environment
+```
+
+*Note: that in docker terminology*
+* `run`  means build (a new container)
+* `start` means start (already exists) container
 
 ## Stop
 ```
@@ -53,7 +52,7 @@ docker rmi dataworkshop/environment
 ```
 
 
-### For geek :)
+### For geek :neckbeard:
 *Note: run it in Dockerfile directory*
 ```
 docker build -t dataworkshop-environment .
