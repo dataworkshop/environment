@@ -13,7 +13,7 @@ Minimum effort & maximum impact :squirrel:
 ## Prerequisites
 Only [Docker](https://docs.docker.com/engine/installation/) :bowtie:
 
-## Build (build only first)
+## Build
 ```
 docker run -dit -p 8888-8889:8888-8889 --name dataworkshop-environment dataworkshop/environment
 ```
@@ -25,7 +25,7 @@ docker run -dit -p 8888-8889:8888-8889 --name dataworkshop-environment dataworks
 *Note: if you're a happy `Docker Toolbox` user to find the ip address use `docker-machine ls`.*
 
 #### Example
-The URL column (`docker-machine ls`) contain  `tcp://192.168.99.100:2376`, so you should copy `192.168.99.100` and add notebook port `192.168.99.100:8888` or lab port `192.168.99.100:8889`. 
+The URL column (`docker-machine ls`) contains  `tcp://192.168.99.100:2376`, so you should copy `192.168.99.100` and add notebook port 192.168.99.100**:8888** or lab port 192.168.99.100**:8889**. 
 
 ## Re-use (already built container)
 ```
