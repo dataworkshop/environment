@@ -1,30 +1,64 @@
-# environment
-Environment for Data Workshop
+# Data Workshop Environment
 
-## What it Gives You
-* Jupyter Notebook and Jupyter Lab
+
+## What?
+Basic environment for [Data Workshop](http://dataworkshop.com)
+
+## Why?
+Minimum effort & maximum impact:
+* [Jupyter Notebook](http://jupyter.org/) and [Jupyter Lab](https://github.com/jupyter/jupyterlab)
 * Anaconda with Python 2.7.x
-* Additional packages seaborn, ggplot, hyperopt, ml_metrics, xgboost
+* Additional packages [seaborn](https://stanford.edu/~mwaskom/software/seaborn/), [ggplot](http://ggplot.yhathq.com/), [hyperopt](https://github.com/hyperopt/hyperopt), [ml_metrics](https://github.com/benhamner/Metrics/tree/master/Python/ml_metrics), [xgboost](https://github.com/dmlc/xgboost)
 
-## Build command (in Dockerfile directory):
+## Prerequisites
+[Docker](https://docs.docker.com/engine/installation/)
+
+## Build (build only first)
 ```
-docker build -t dataworkshop:v0.1 .
-```
-
-## Basic Use
-
-The following command starts a container with the Jupyter Notebook server listening for HTTP connections on port 8888 and Jupyter Lab server listening on port 8889. Windows volume is mounted to /opt/notebooks directory:
-
-```
-docker run -dt -p 8888-8889:8888-8889 -v //c/Users/windows_folder/:/opt/notebooks --name jupyter dataworkshop:v0.1
+docker run -dit -p 8888-8889:8888-8889 --name dataworkshop-environment dataworkshop/environment
 ```
 
-## Accessing jupyter servers
+## Re-use (already built container)
+```
+docker start dataworkshop-environment
+```
 
-Servers are available in your browser under localhost:8888 (Notebook) and localhost:8889 (Lab).
+*Note: that in docker terminology*
+* `run`  means build (a new container)
+* `start` means start (already exists) container
 
-Depending on docker app you're using, localhost:8888 is docker-machine ip:8888 (when usin Docker Toolbox), or localhost:8888 (when using Docker for Windows).  
+## Use
+* Notebook - [localhost:8888](http://localhost:8888)
+* Lab - [localhost:8889](http://localhost:8889)
 
-## Running container without jupyter server
+*Note: if you're a happy `Docker Toolbox` user to find the ip address use `docker-machine ls`.*
+
+#### Example
+The URL column (`docker-machine ls`) contain  `tcp://192.168.99.100:2376`, so you should copy `192.168.99.100` and add notebook port `192.168.99.100:8888` or lab port `192.168.99.100:8889`. 
+
+
+## Stop
+```
+docker stop dataworkshop-environment
+```
+
+## Remove container/image
+container
+```
+docker rm dataworkshop-environment
+```
+or image
+```
+docker rmi dataworkshop/environment
+```
+
+
+### For geek :)
+*Note: run it in Dockerfile directory*
+```
+docker build -t dataworkshop-environment .
+```
+
+### Running container without jupyter server
 
 Jupyter servers are started by running start_script.sh in CMD section. However, you can easily override it, by specifying a command at the end of docker run... (in this case servers won't start)
