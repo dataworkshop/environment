@@ -41,6 +41,12 @@ docker start dataworkshop-environment
 docker stop dataworkshop-environment
 ```
 
+## Update (image)
+To get the last changes from [dockerhub](https://hub.docker.com/r/dataworkshop/environment/)
+```
+docker pull dataworkshop/environment
+```
+
 ## Remove container/image
 container
 ```
