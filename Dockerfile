@@ -1,6 +1,10 @@
 FROM continuumio/anaconda
 
     # install jupyter & jupyter lab
+RUN apt-get update && \
+    apt-get -y upgrade && \
+    apt-get -y install build-essential
+
 RUN cd /opt/conda/bin && \
     conda install jupyter -y --quiet && \
     pip install jupyterlab && \  
@@ -14,12 +18,12 @@ RUN pip install seaborn && \
     pip install gmplot && \
     pip install geoplotlib && \
     pip install folium && \
+	apt-get -y install libgdal-dev && \
     pip install geopandas && \
     pip install vincent && \
     
  
     ## build xgboost from git.
-    apt-get --assume-yes install build-essential && \
     cd /usr/local/src && \
     git clone --recursive https://github.com/dmlc/xgboost.git && cd xgboost && ./build.sh && cd python-package && python setup.py install
 
