@@ -11,7 +11,13 @@ RUN pip install seaborn && \
     pip install ggplot && \
     pip install git+https://github.com/hyperopt/hyperopt.git && \
     pip install ml_metrics && \
-
+    pip install gmplot && \
+    pip install geoplotlib && \
+    pip install folium && \
+    pip install geopandas && \
+    pip install vincent && \
+    
+ 
     ## build xgboost from git.
     apt-get --assume-yes install build-essential && \
     cd /usr/local/src && \
