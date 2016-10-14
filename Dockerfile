@@ -16,12 +16,12 @@ RUN pip install seaborn && \
     pip install git+https://github.com/hyperopt/hyperopt.git && \
     pip install ml_metrics && \
     pip install gmplot && \
-    pip install geoplotlib && \
     pip install folium && \
-	apt-get -y install libgdal-dev && \
-    pip install geopandas && \
+    apt-get -y install libgdal-dev && \
     pip install vincent && \
-    
+    conda install -c  anaconda basemap -y --quiet && \
+    conda install -c conda-forge geopandas -y --quiet && \
+
  
     ## build xgboost from git.
     cd /usr/local/src && \
