@@ -1,4 +1,7 @@
 seaborn
 ggplot
 git+https://github.com/hyperopt/hyperopt.git
+hyperas
 ml_metrics
+git+git://github.com/Theano/Theano.git
+git+git://github.com/fchollet/keras.git

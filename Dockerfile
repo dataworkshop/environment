@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-ENV HOSTNAME jupyter
+ENV HOSTNAME dataworkshop
 
 RUN apt-get update && \
     apt-get -y upgrade && \
@@ -54,6 +54,8 @@ RUN pip install -r /tmp/extra_packages.txt
 # conda install -c anaconda basemap -y --quiet && \
 ## 90MB
 # conda install -c conda-forge geopandas -y --quiet
+
+COPY .keras/keras.json ~/.keras/keras.json
 
 ## get script with prerequisites
 RUN pip install clint && \
