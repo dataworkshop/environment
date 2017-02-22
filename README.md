@@ -7,11 +7,12 @@ Basic environment for [Data Workshop](http://dataworkshop.com)
 ## Why?
 Minimum effort & maximum impact :squirrel:
 * [Jupyter Notebook](http://jupyter.org/) and [Jupyter Lab](https://github.com/jupyter/jupyterlab)
-* Anaconda with Python 2.7.x
-* Additional packages [seaborn](https://stanford.edu/~mwaskom/software/seaborn/), [ggplot](http://ggplot.yhathq.com/), [hyperopt](https://github.com/hyperopt/hyperopt), [ml_metrics](https://github.com/benhamner/Metrics/tree/master/Python/ml_metrics), [xgboost](https://github.com/dmlc/xgboost)
+* [Anaconda](https://docs.continuum.io/anaconda/) with Python 3
+* Additional packages [seaborn](https://stanford.edu/~mwaskom/software/seaborn/), [ggplot](http://ggplot.yhathq.com/), [hyperopt](https://github.com/hyperopt/hyperopt), [hyperas](https://github.com/maxpumperla/hyperas), [ml_metrics](https://github.com/benhamner/Metrics/tree/master/Python/ml_metrics), [xgboost](https://github.com/dmlc/xgboost)
 
 ## Prerequisites
-Only [Docker](https://docs.docker.com/engine/installation/) :bowtie:
+Only [Docker](https://docs.docker.com/engine/installation/) (installation Instruction for [Mac](https://docs.docker.com/docker-for-mac/install/) and [Windows](https://docs.docker.com/docker-for-windows/install/)) :bowtie:
+
 
 ## Build
 ```
