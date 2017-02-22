@@ -10,7 +10,7 @@ RUN apt-get update && \
     libglib2.0-0 libxext6 libsm6 libxrender1 git vim
 	
 RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
-    wget --quiet https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh -O ~/anaconda.sh && \
+    wget --quiet https://repo.continuum.io/archive/Anaconda3-4.3.0-Linux-x86_64.sh -O ~/anaconda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/conda && \
     rm ~/anaconda.sh
 
@@ -27,7 +27,7 @@ RUN apt-get install -y curl grep sed dpkg && \
 # Install anaconda
 ENV PATH /opt/conda/bin:$PATH
 RUN cd /opt/conda/bin && \
-    conda install -c conda-forge jupyterlab=0.7.0 -y --quiet && \
+    conda install -c conda-forge jupyterlab -y --quiet && \
     conda install -c conda-forge jupyter_contrib_nbextensions -y && \
     jupyter serverextension enable --py jupyterlab && \
     mkdir /opt/notebooks
