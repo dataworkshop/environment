@@ -55,7 +55,7 @@ RUN pip install -r /tmp/extra_packages.txt
 ## 90MB
 # conda install -c conda-forge geopandas -y --quiet
 
-COPY .keras/keras.json ~/.keras/keras.json
+COPY .keras/keras.json /root/.keras/keras.json
 
 ## get script with prerequisites
 RUN pip install clint && \
