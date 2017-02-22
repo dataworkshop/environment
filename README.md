@@ -7,7 +7,7 @@ Basic environment for [Data Workshop](http://dataworkshop.com)
 ## Why?
 Minimum effort & maximum impact :squirrel:
 * [Jupyter Notebook](http://jupyter.org/) and [Jupyter Lab](https://github.com/jupyter/jupyterlab)
-* [Anaconda](https://docs.continuum.io/anaconda/) with Python 3
+* [Anaconda](https://docs.continuum.io/anaconda/) with **Python 3.6.0**
 * Additional packages [seaborn](https://stanford.edu/~mwaskom/software/seaborn/), [ggplot](http://ggplot.yhathq.com/), [hyperopt](https://github.com/hyperopt/hyperopt), [hyperas](https://github.com/maxpumperla/hyperas), [ml_metrics](https://github.com/benhamner/Metrics/tree/master/Python/ml_metrics), [xgboost](https://github.com/dmlc/xgboost)
 
 ## Prerequisites
@@ -58,6 +58,15 @@ or image
 docker rmi dataworkshop/environment
 ```
 
+## Runtime metrics
+```
+docker stats dataworkshop-environment
+```
+
+## Show Running Processes
+```
+docker top dataworkshop-environment
+```
 
 ### For geek :neckbeard:
 *Note: run it in Dockerfile directory*
