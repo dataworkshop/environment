@@ -2,7 +2,7 @@
 
 
 ## What?
-Basic environment for [Data Workshop](http://dataworkshop.com)
+Basic environment for [Data Workshop](http://dataworkshop.eu)
 
 ## Why?
 Minimum effort & maximum impact :squirrel:
