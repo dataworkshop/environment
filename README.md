@@ -16,7 +16,7 @@ Only [Docker](https://docs.docker.com/engine/installation/) (installation Instru
 
 ## Build
 ```
-docker run -dit -p 8888-8889:8888-8889 --name dataworkshop-environment dataworkshop/environment
+docker run --net=host --dns 127.0.0.1 --dns 8.8.8.8 --dns 8.8.4.4 -dit -p 8888-8889:8888-8889 --name dataworkshop-environment dataworkshop/environment
 ```
 
 ## Use
