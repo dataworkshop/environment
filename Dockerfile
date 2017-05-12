@@ -29,6 +29,7 @@ ENV PATH /opt/conda/bin:$PATH
 RUN cd /opt/conda/bin && \
     conda install -c conda-forge jupyterlab -y --quiet && \
     conda install -c conda-forge jupyter_contrib_nbextensions -y && \
+    conda install -c https://conda.anaconda.org/menpo opencv -y && \
     jupyter serverextension enable --py jupyterlab && \
     mkdir /opt/notebooks
 
