@@ -1,3 +1,4 @@
+opencv-python
 seaborn
 ggplot
 git+https://github.com/hyperopt/hyperopt.git
